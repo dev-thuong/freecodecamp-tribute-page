@@ -1,0 +1,425 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #000 50%, #00000099);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #eee;
+}
+
+img {
+    width: 100%;
+}
+
+figcaption {
+    color: #eee;
+    text-align: center;
+    margin-top: 6px;
+}
+
+figure > img {
+    border-radius: 12px;
+}
+
+a {
+    color: rgb(136, 136, 231);
+}
+
+header {
+    width: 100%;
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg");
+    background-size: cover;
+    background-position: center 18%;
+    padding: 100px 0 300px;
+    position: relative;
+    z-index: 1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 0, transparent 70%, #000 90%);
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 5rem;
+    color: #f0ffff;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px #000, 2px 2px 10px #000, 2px 2px 20px #000;
+}
+
+header p {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #eee;
+    text-shadow: 2px 2px 2px #000, 2px 2px 10px #000;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 450px;
+    margin: 12px auto;
+}
+
+header p::after {
+    content: "";
+    width: 140%;
+    height: 160%;
+    top: -30%;
+    right: -20%;
+    position: absolute;
+    background-image: url("assets/yellow-paint.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: brightness(0%);
+    z-index: -1;
+}
+
+.avatar {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -10%;
+    border: 16px solid #000;
+    z-index: 5;
+    border-radius: 50%;
+    background: url("assets/norman-borlaug-avatar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  BASIC INFORMATION SECTION  */
+#basic-info {
+    display: flex;
+    box-sizing: border-box;
+    height: 300px;
+    gap: 20px;
+}
+
+.born, .died {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+}
+
+.born {
+    background: url("assets/cresco-car-show.webp");
+    background-position: 50% 90%;
+}
+
+.died {
+    background: url("assets/view-of-dallas-from-reunion-tower.jpg");
+    background-position: 50% 50%;
+}
+
+.date-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, transparent 10%, rgba(0, 0, 0, 0.8)) ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.date-card > span:first-of-type {
+    font-weight: 900;
+    font-size: 42px;
+    text-shadow: 2px 2px 2px #000, 2px 2px 10px #000, 2px 2px 20px #000;
+}
+
+.date-card > span:last-of-type {
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px #000, 2px 2px 10px #000, 2px 2px 20px #000;
+}
+
+/*   GENERAL INTRODUCTION SECTION   */
+#general-introduction {
+    margin-top: 3rem;
+}
+
+#general-introduction p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 24px;
+    text-indent: 32px;
+    color: #eee;
+}
+
+/*   AWARDS SECTION   */
+#awards > p {
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#awards img {
+    width: 100%;
+}
+
+.awards-container {
+    flex-wrap: wrap;
+    width: 76%;
+    margin: 2rem 12%;
+    display: flex;
+    gap: 24px;
+    align-items: start;
+    justify-content: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip > div {
+    width: 150px;
+}
+
+.tooltip > div > p {
+    text-align: center;
+    font-size: 24px;
+    color: #eee;
+    margin: 12px 0;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.99);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.tooltiptext > p {
+    text-align: justify;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*   COMMENTS SECTION   */
+.comment-container {
+    background-color: #00000099;
+    color: #eee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#comments > p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #eee;
+}
+
+.comment-container q {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.comment-container p {
+    font-size: 22px;
+    text-align: right;
+    margin: 12px 0 0;
+    font-weight: 700;
+    color: #555;
+}
+
+/*   TIMELINE SECTION   */
+.timeline-container {
+    position: relative;
+}
+
+.timeline-container::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    top: 0;
+    right: calc(50% - 3px);
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.timeline-container > p {
+    position: absolute;
+    color: #eee;
+    font-size: 18px;
+    width: calc(50% - 3px);
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background-color: #00000099;
+}
+
+.timeline-container > p:nth-child(2n) {
+    right: 0;
+    border-radius: 0 20px 20px 0;
+    padding: 5px 20px 5px 0;
+}
+
+.timeline-container > p:nth-child(2n+1) {
+    left: 0;
+    flex-direction: row-reverse;
+    border-radius: 20px 0 0 20px;
+    padding: 5px 0 5px 20px;
+}
+
+.timeline-container > p:nth-child(2n) > span:first-of-type,
+.timeline-container > p:nth-child(2n + 1) > span:first-of-type {
+    width: 80px;
+    text-align: center;
+}
+
+.timeline-container > p:nth-child(2n) > span:last-of-type,
+.timeline-container > p:nth-child(2n + 1) > span:last-of-type {
+    width: calc(100% - 80px);
+    text-align: justify;
+}
+
+/*   FOOTER   */
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: #00000099;
+}
+
+footer p {
+    color: #eee;
+    text-align: center;
+    font-size: 16px;
+    padding: 17px 12%;
+}
+
+.padd-1 {
+    width: 76%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.padd-2 {
+    width: 56%;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+
+@media only screen and (max-width: 768px) {
+    .padd-1 {
+        width: 86%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .padd-2 {
+        width: 76%;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    #basic-info {
+        height: 200px;
+    }
+
+    .date-card > span:first-of-type {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .date-card > span:last-of-type {
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .padd-1 {
+        width: calc(100% - 3rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .padd-2 {
+        width: calc(100% - 6rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .date-card > span:first-of-type {
+        font-size: 24px;
+    }
+
+    .timeline-container > p {
+        width: calc(100% - 25px);
+    }
+
+    .timeline-container::after {
+        left: 20px;
+    }
+
+    .timeline-container > p:nth-child(2n+1),
+    .timeline-container > p:nth-child(2n) {
+        left: 25px;
+        flex-direction: row;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .timeline-container > p:nth-child(2n+1)::after,
+    .timeline-container > p:nth-child(2n)::after {
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        border-radius: 50%;
+        width: 16px;
+        background-color: #eee;
+        height: 16px;
+        position: absolute;
+    } 
+}
